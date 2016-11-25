@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Seletores de atributo</title>
+
+		<style type="text/css">
+			div {position: absolute; width: 80px; height: 80px; border: 2px solid #000; background: #0f0;}
+			p {margin: 5px 0;}
+
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('button').click(function() {
+					$('div').animate({
+					width: '80px',
+					height: '100px',
+					left: '+=500px'
+					}, 1000)
+					.fadeTo(500, 0.3)
+					.animate({top: '150px'}, 1000)
+					.fadeTo(500, 1)
+					.animate({
+					left: '-=500px',
+					top: '80px'
+					}, 'fast')
+					.animate({
+					width: '40px',
+					height: '40px'
+					}, 'slow')
+				});
+			});		
+		</script>
+	</head>
+	<body>
+		<p>Animação encadeada</p>
+		<button type="button">Animar</button>
+		<div></div>
+	</body>
+</html>

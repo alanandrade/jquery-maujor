@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Seletores de atributo</title>
+
+		<style type="text/css">
+			body {position: relative;}
+			div {
+				width:150px; 
+				height:150px;
+				position:absolute;
+				right:230px; 
+				top:80px;
+				margin:30px 0;
+				border:2px solid #000;
+				background:#0f0; 
+				display:none;
+				}
+			.fadeto {
+				display:block;
+				background:red;
+				right:400px;
+				}
+			p {
+				position:absolute; 
+				width:130px;
+				right:410px;
+				top:110px;
+				}
+
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$('button').eq(0).click(function() {
+					$('div').eq(0).fadeIn(1500);
+				});
+
+				$('button').eq(1).click(function() {
+					$('div').eq(0).fadeOut('slow');
+				});
+
+				$('button').eq(2).click(function() {
+					$('div').eq(1).fadeTo(1500, 0.3);
+				});
+
+				$('button').eq(3).click(function() {
+					$('div').eq(1).fadeTo(1500, 1);
+				});
+
+			});		
+		</script>
+	</head>
+	<body>
+		<p>Ops tem algo aqui! Tudo que está atrás desta div
+		é revelado quando se diminui sua opacidade. :-) </p>
+		
+		<button type="button">Efeito fadeIn(1500)</button>
+		<button type="button">Efeito fadeOut('slow')</button><br /><br />
+		<button type="button">Efeito fadeTo(1500, 0.3)</button>
+		<button type="button">Efeito fadeTo(1500, 1)</button>
+		
+		<div>Demonstração de fadeIn()/fadeOut.</div>
+		<div class="fadeto"></div>
+	</body>
+</html>

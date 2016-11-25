@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title></title>
+
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 150px;
+				background-color: #ff0;
+				border: 2px solid #000;
+				cursor: pointer;
+			}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$('button:eq(0)').click(function(){
+				$('p.esconde').toggle();
+				});	
+				
+				$('button:eq(1)').click(function(){
+				$('p').toggle();
+				});	
+					
+			});	
+		</script>
+	</head>
+	<body>
+		<div id="com-classe">
+			<label>Parágrafos com classe "esconde"<br /></label>
+			<button type="button">Esconder/Mostrar</button>
+		</div>
+
+		<div id="todos">
+			<label>Todos os parágrafos<br /></label>
+			<button type="button">Esconder/Mostrar</button>
+		</div>
+
+		<h1>Folhas de estilo em cascata</h1>
+		<p>CSS é a sigla em inglês para Cascading Style Sheet que em português foi traduzido para folha de estilo em cascata e é um mecanismo simples para adicionar estilos (p.ex., fontes, cores, espaçamentos) aos documentos Web.</p>
+		<p> A grande vantagem do uso de CSS é a de separar a marcação HTML, da apresentação do site. Em outras palavras, vale dizer que o HTML destina-se unicamente a estruturar e marcar o conteúdo, ficando por conta das CSS toda a responsabilidade pelo visual do documento.</p>
+
+		<p>HTML marca e estrutura textos, cabeçalhos, parágrafos, links, botões, formulários, imagens e demais elementos da página e CSS define cores, posicionamento na tela, estilos de linhas, bordas e tudo o mais relacionado à apresentação.</p>
+
+		<p class="esconde">A adoção desta técnica resulta em múltiplas vantagens e benefícios que não são conseguidos quando se utiliza o conceito largamente empregado para construção de web sites, baseado no uso de tabelas e de atributos de estilização dentro das tags HTML.</p>
+
+		<p class="esconde">Projetar um site navegável tanto em monitor de 1280x1024 quanto em uma telinha de 320x240 de um PDA, com utilização da mesma marcação é fantástico e possível. Basta projetar em conformidade com os Padrões Web entregando às CSS a missão de acomodar o conteúdo na tela!</p> 
+
+	</body>
+</html>

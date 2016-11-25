@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Capitulo 2</title>
+
+		<style type="text/css">
+			div {width: 200px; height: 100px; border: 1px solid #000; margin: 20px;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){				
+				$("button").click(function(){
+					$(":header").css("background","red");
+					/*Acessa todos os cabeçalhos de H1 até H3 e altera sua cor de fundo*/
+				});	
+			});			
+		</script>
+	</head>
+	<body>
+		<button type="button">Vermelha</button>
+		<h1>Cabeçalho nivel 1</h1>
+			<p>Texto de um paragrafo</p>
+		<h2>Cabeçalho nivel 2</h2>
+			<p>Texto de um paragrafo</p>
+		<h3>Cabeçalho nivel 3</h3>
+			<p>Texto de um paragrafo</p>
+		<h4>Cabeçalho nivel 4</h4>
+			<p>Texto de um paragrafo</p>
+		<h5>Cabeçalho nivel 5</h5>
+			<p>Texto de um paragrafo</p>
+		<h6>Cabeçalho nivel 6</h6>
+	</body>
+</html>

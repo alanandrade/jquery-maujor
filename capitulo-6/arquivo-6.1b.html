@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Seletores de atributo</title>
+
+		<style type="text/css">
+			p {background-color: #ff0;}
+			.invisivel{display: none; background-color: #f00;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('button').click(function () {
+				/*Ao clicar no button*/
+					$("p").toggle("slow");
+					/*Alterna entre as tag p*/
+				});
+			});		
+		</script>
+	</head>
+	<body>
+		<button type="button">toggle()</button>
+		<h1>Dois parágrafos</h1>
+
+		<p class="visivel">Primeiro parágrafo: inicialmente visivel</p>
+		<p class="invisivel">Segundo parágrafo: inicialmente invisivel</p>
+	</body>
+</html>

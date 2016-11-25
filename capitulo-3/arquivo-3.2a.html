@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Seletores de atributo</title>
+
+		<style type="text/css">
+			.minha_classe {color: #f00; font-size: 45px;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").click(function(){
+					$("p").addClass("minha_classe");
+				});
+			});		
+		</script>
+	</head>
+	<body>
+		<button type="button">Adicionar</button>
+		<p>Parágrafo ao qual foi adicionada uma classe com jQuery.</p>
+	</body>
+</html>

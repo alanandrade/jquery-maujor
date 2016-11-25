@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Seletores de atributo</title>
+
+		<style type="text/css">
+			.res1, .res2{
+				display: none;
+				width: 22rem;
+				margin: 1.5rem 0;
+				height: 12.5rem;
+				overflow: auto;
+				padding: 3rem 0.8rem;
+				border: 1px solid #000;
+				background-color: #ffc;
+			}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".btn1").click(function(){
+				/*Ao clicar no button com class btn1, executa a tarefa abaixo*/
+					var valorPropriedade = $(".inp1").prop("value");
+					/*Cria a variavel e adiciona a ela o valor inserido propriedade input*/
+					$(".res1").css("display","block").append("O valor da propriedade value é: " + valorPropriedade + "<br />");
+					/*Exibe desntro da classe res1 o resultado da variavel*/
+				});
+
+				$(".btn2").click(function(){
+					/*Ao clicar no button com class btn2, executa a tarefa abaixo*/
+					var valorAtributo = $(".inp2").attr("value");
+					/*Cria a variavel e adiciona a ela o valor do atributo input*/
+					$(".res2").css("display","block").append("O valor do atributo value é: " + valorAtributo + "<br />");
+					/*Exibe desntro da classe res2 o resultado da variavel*/
+				});
+			});		
+		</script>
+	</head>
+	<body>
+		<input type="text" value="Valor inicial" class="inp1">
+		<button type="button" class="btn1">Propriedade</button>
+		<div class="res1"></div>
+		
+		<hr />
+
+		<input type="text" value="Valor inicial" class="inp2">
+		<button type="button" class="btn2">Atributo</button>
+		<div class="res2"></div>
+	</body>
+</html>

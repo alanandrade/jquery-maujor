@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Seletores de atributo</title>
+
+		<style type="text/css">
+			.item1{color: #f00;}
+			.item2{color: #0f0;}
+			.item3{color: #00f;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").click(function(){
+				/*Ao clicar em Buttom*/
+					$("li").addClass(function(indice, classe){
+					/*Adiciona a classe */
+						return (classe + (indice + 1))
+					});
+				});
+			});		
+		</script>
+	</head>
+	<body>
+		<button type="button">Adicionar</button>
+		<ul>
+			<li class="item">Item 1</li>
+			<li class="item">Item 2</li>
+			<li class="item">Item 3</li>
+		</ul>
+	</body>
+</html>

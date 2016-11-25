@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Seletores de atributo</title>
+
+		<style type="text/css">
+			div, p{width: 200px; height: 300px; margin: 30px 0; border: 2px solid #000; color: #fff; background: #f00; display: none;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").eq(0).click(function(){
+					$("div").show();
+				});
+
+				$("button").eq(1).click(function(){
+					$("div").hide();
+				});
+
+				$("button").eq(2).click(function(){
+					$("div").show("slow");
+				});
+
+				$("button").eq(3).click(function(){
+					$("div").hide("slow");
+				});
+
+				$("button").eq(4).click(function(){
+					$("div").show(3000);
+				});
+
+				$("button").eq(5).click(function(){
+					$("div").hide(1500);
+				});
+
+				$("button").eq(6).click(function(){
+					$("p").toggle();
+				});
+			});		
+		</script>
+	</head>
+	<body>
+		<button type="button">Efeito show()</button>
+		<button type="button">Efeito Hide()</button>
+		<button type="button">Efeito Show("slow")</button>
+		<button type="button">Efeito Show("hide")</button>
+		<button type="button">Efeito Show(3000)</button>
+		<button type="button">Efeito Hide(1500)</button>
+		<button type="button">Efeito toggle()</button>
+
+		<div>Div em todo o seu esplendor.</div>
+		<p style="display: none; background: #333;">
+			Clique seguidamente o botão efeito toggle
+		</p>
+	</body>
+</html>

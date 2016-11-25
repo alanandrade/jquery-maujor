@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Seletores de atributo</title>
+
+		<style type="text/css">
+			.res1, .res2{
+				display: none;
+				width: 22rem;
+				margin: 1.5rem 0;
+				height: 12.5rem;
+				overflow: auto;
+				padding: 3rem 0.8rem;
+				border: 1px solid #000;
+				background-color: #ffc;
+			}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".btn1").click(function(){
+					/*Ao clicar em BTN1*/
+					$(".inp1, .inp2").prop("checked", false);
+					/*Checked se tornará falso, irá ser desmarcado. Alteram a propriedade de checked*/
+				});
+
+				$(".btn2").click(function(){
+					/*Ao clicar em BTN2*/
+					$(".inp1, .inp2").prop("checked", true);
+					/*Checked se tornará true, irá ser marcado. Alteram a propriedade de checked*/
+				});
+			});		
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" checked="checked" class="inp1">
+		<input type="radio" checked="checked" class="inp2">
+		<button type="button" class="btn1">Desmarcar</button>
+		<button type="button" class="btn2">Marcar</button>
+	</body>
+</html>

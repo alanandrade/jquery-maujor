@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title></title>
+
+		<style type="text/css">
+			body{
+				width: 70%;
+				font: 100%, sans-serif;
+				margin: 0 auto;
+			}
+
+			dt{
+				margin: 20px 0 3px 0;
+				font-weight: bold;
+				border-bottom: 1px solid #ccc;
+			}
+
+			dd{
+				margin: 0;
+				padding: 5px 0 0 0;
+				text-align: justify;
+			}
+
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				var textoVer = "<a href='#' style='color:#666; text-decoration: none;'>Ver resposta</a>";
+				$("dd").css('display','none');
+				$("dt").after(textoVer);
+				$("a").click(function(){
+					if($(this).text() == "Ver resposta"){
+						$(this).next().next().toggle();
+						$(this).text("Fechar");
+						$(this).next()
+						.css({
+							border:"1px solid #c30",
+							padding:"5px 10px",
+							background:"#ff9"
+						})
+						.slideToggle('slow');
+					} else {
+						$(this).text("Ver resposta");
+						$(this).next().slideToggle('slow');
+						$(this).next().next().toggle();
+					}
+				});
+					
+			});	
+		</script>
+	</head>
+	<body>
+		
+		<h1>FAQ CSS</h1>
+		<h2 id="indice">Índice</h2>
+		<ol>
+			<li><a href="#css">O que significa a sigla CSS?</a></li>
+			<!--Omitidos Oito Itens-->
+			<li><a href="#comentario">Posso incluir comentários nas regras CSS?</a></li>
+		</ol>
+
+		<h3>Perguntas e respostas</h3>
+		<dl>
+			<dt id="css">O que significa a sigla CSS?</dt>
+			<dd>CSS é a sigla...</dd>
+			<!--imitidos oito itens-->
+			<dt id="comentario">Posso incluir comentários nas regras CSS?</dt>
+			<dd>Sim. Comentários podem e...</dd>
+			<dd><a href="#indice">Indice</a></dd>
+		</dl>
+
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Seletores de atributo</title>
+
+		<style type="text/css">
+			div, p{width: 200px; height: 300px; margin: 30px 0; border: 2px solid #000; color: #fff; background: #f00; display: none;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").eq(0).click(function(){
+					$("div").eq(0).slideDown("slow");
+				});
+
+				$("button").eq(1).click(function(){
+					$("div").eq(0).slideUp("slow");
+				});
+
+				$("button").eq(2).click(function(){
+					$(".bug").slideDown("slow");
+				});
+
+				$("button").eq(3).click(function(){
+					$(".bug").slideUp("slow");
+				});
+
+				$("button").eq(4).click(function(){
+					$(".alterna").slideToggle(1500);
+				});
+			});		
+		</script>
+	</head>
+	<body>
+		<button type="button">Efeito slideDown("slow")</button>
+		<button type="button">Efeito slideUp("slow")</button>
+		<button type="button">BUG slideDown("slow")</button>
+		<button type="button">BUG slideUp("slow")</button>
+		<button type="button">Efeito slideToggle(1500)</button>
+
+		<div>DIV em todo o seu esplendor.</div>
+
+		<div class="bug">DIV em todo o seu esplendor. <br />
+			Com declaração de padding
+		</div>
+
+		<div class="alterna">
+			Demonstração do efeito slideToggle(1500).<br />
+			Clique aqui seguidamente no botão efeitoToggle().
+		</div>
+
+		</div>
+	</body>
+</html>

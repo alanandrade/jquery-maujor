@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Capitulo 2</title>
+
+		<style type="text/css">
+			p {cursor: pointer;}
+			div {width: 200px; height: 100px; border: 1px solid #000; margin: 20px;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+		<script type="text/javascript">
+			 $(document).ready(function(){
+			    	$('p').click(function(){
+			    	/*Ao clicar no parágrafo*/
+			    		var nDiv = $("div").length;
+			    		/*É criada uma variavel nDiv e adicionado a ela um contador do seletor que está selecionando DIV*/
+			    		$('<span>Foram encontrados ' + nDiv + ' Divs.</span>').css('color','red').appendTo('p');
+			    		/*Apresente o resultado guardado na variavel ndiv dentro da tag p*/
+			    	});
+			  });
+		</script>
+	</head>
+	<body>
+		<p>Clique aqui para saber quantos divs existem nesse documento.</br></p>
+		<div>DIV</div>
+		<div>DIV</div>
+		<div>DIV</div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title></title>
+
+		<style type="text/css">
+			h1{font-size: 1.6em;}
+			label{color: #c30;}
+			div#tudo {background: #000; color: #0f0; padding: 2px 20px;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				var htmlBotaoUm = '<div id="todos"><label>Todos os parágrafos<br /></label><button type="button"></button></div>';
+				/*Cria a variavel e adiciona a ela o HTML acima*/
+				$("h1").after(htmlBotaoUm);
+				/*Adiciona conteudo do da variavel após a tah H1*/
+				$("button").text("Esconder").click(function(){
+				/*Ao clicar em button que inicia com o nome do button de "Esconder"*/
+					if ($(this).text() == "Mostrar"){
+					/*Se text for exatamente igual a Mostrar*/
+						$(this).text("Esconder");
+						$("#tudo").show(3000);
+						/*Altera nome do button para "Esconder" e exibi div id="tudo" com o tempo de 3000mm*/
+					} else {
+						/*Se não*/
+						$(this).text("Mostrar");
+						$("#tudo").hide(1000);
+						/*Altere Texto para "Mostrar" e esconde div "tudo" no tempo de 1000mm*/
+					}
+				});
+					
+			});	
+		</script>
+	</head>
+	<body>
+		
+		<h1>Folhas de Estilo em cascata</h1>
+		<div id="tudo">
+			<p>CSS é a sigla em ...</p>
+			<p>A grande vantagem ...</p>
+			<p>HTML marca e estrutura ...</p>
+			<p>A adoção desta ...</p>
+			<p class="esconde">Projetar um ...</p>
+		</div>
+
+	</body>
+</html>

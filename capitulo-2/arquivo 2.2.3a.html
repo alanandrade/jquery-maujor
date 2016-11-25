@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Capitulo 2</title>
+
+		<style type="text/css">
+			div {width: 200px; height: 100px; border: 1px solid #000; margin: 20px;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){				
+				$("button").click(function(){
+					$("li:first").css('background','red');
+					/*Acessa o primeiro elemento do grupo*/
+				});	
+			});			
+		</script>
+	</head>
+	<body>
+		<button type="button">Vermelha</button>
+		<ul>
+			<li>Primeiro Item</li>
+			<li>Segundo Item</li>
+			<li>Terceiro Item</li>
+			<li>Quarto Item</li>
+			<li>Quinto Item</li>
+		</ul>
+	</body>
+</html>

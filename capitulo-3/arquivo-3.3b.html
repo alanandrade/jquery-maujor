@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Seletores de atributo</title>
+
+		<style type="text/css">
+			.um{color: #f00; font: 24px sans-serif; }
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").click(function(){
+					/*Ao clicar no button*/
+					$('div').html('<p class="um">Conteúdo inserido com <code>html(<i>valor</i>)</code></p>');
+					/*Exibi dentro de div o texto dentro do parenteses html*/
+				});			
+			});		
+		</script>
+	</head>
+	<body>
+		<button type="button">HTML</button>
+		<div></div>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title></title>
+
+		<style type="text/css">
+			body{
+				width: 700px;
+				font: 80%/1.2 Arial, Helvetica, sans-serif;
+				margin: 20px 0;
+				padding: 10px 20px;
+				border: 1px solid #ccc;
+			}
+
+			h1{font-size: 1.6em; clear: both;}
+			div{margin-bottom: 20px; color: #c30;}
+			div#com-classe{float: left;}
+			div#todos{float: right;}
+			button{font-size: 0.9em;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button:eq(0)").click(function(){
+					$("p.esconde").hide();
+				});
+
+				$("button:eq(1)").click(function(){
+					$("p.esconde").show();
+				});
+
+				$("button:eq(2)").click(function(){
+					$("p").hide();
+				});
+
+				$("button:eq(3)").click(function(){
+					$("p").show();
+				});
+			});		
+		</script>
+	</head>
+	<body>
+		<div id="com-classe">
+			<label>Parágrafos com classe "esconde" <br/ ></label>
+			<button type="button">Esconder</button>
+			<button type="button">Mostrar</button>
+		</div>
+
+		<div id="todos">
+			<label>Todos os parágrafos<br /></label>
+			<button type="button">Esconder</button>
+			<button type="button">Mostrar</button>
+		</div>
+
+		<h1>Folhas de estilo em cascata</h1>
+		<p>CSS é a sigla em...</p>
+		<p>A grande vantagem...</p>
+		<p>HTML marca e...</p>
+		<p class="esconde">A adoção desta...</p>
+		<p class="esconde">Projetar um...</p>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Capitulo 2</title>
+
+		<style type="text/css">
+			div{margin: 20px 0;}
+			span {color: red;}
+			p {cursor: pointer;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('blockquote p').click(function () {
+				/*Selecione o parágrafo dentro de blockquote*/
+		      	var indice = $(this).index();
+		      	
+		      	$('div').append('O índice deste parágrafo em relação aos seus elementos-irmãos é: <span>' + indice + '</span><br />');
+				});
+				
+				$('.reset').click(function () {		
+				$('div').empty();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button type="button" class="reset">Reset</button>
+		<br />
+
+		<b>Clique em cada um dos parágrafos abaixo para revelar seu índice</b>
+
+		<blockquote>
+			<p>Parágrafo um.</p>
+			<p>Parágrafo dois.</p>
+			<p>Parágrafo três.</p>
+		</blockquote>
+
+		<div></div>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title></title>
+
+		<style type="text/css">
+			p{background: #444; color: #fff; padding: 8px 20px;}
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				$("html").css("heigh","101%")
+				/*Esta regra força o aparecimento da barra de rolagem vertical*/
+				$("h1").after("<button type='button'>Esconder</button>");
+				/*Inseriu um button logo após o H1*/
+				var emAndamento = "<img src='carregando.gif' class='gif-andamento' />";
+				/*Criou-se e adicionou na variavel um GIF*/
+				var alturaJanela = $(window).height();
+				/*Adicionou na variavel a altura total da janela em pixel*/
+				var alturaObjeto = $("p").outerHeight();
+				/*Adicionou na variavel a altura Total do objeto*/
+				var posicaoObjeto = $("p").position().top;
+				/*Armazenou a quantidade a distancia em pixel que a tag p se encontra do topo*/
+				var amplitudeDeslocamento = alturaJanela - alturaObjeto - posicaoObjeto;
+				/*Armazenou a quantidade que deverá se locomover em pixel*/
+
+				$("button").click(function(){
+					if ($(this).text() == "Mostrar") {
+						$(this).text("Esconder").hide().after(emAndamento);
+						$("p").show().animate({top:0, opacity:1}, 2500, function(){
+							$(".gif-andamento").css("display","none");
+							$("button").show();
+						});
+					} else{
+						$(this).text("Mostrar").hide().after(emAndamento);
+						$("p").css({position:"relative"})
+						.animate({top: amplitudeDeslocamento, opacity:0}, 2500, function(){
+							$("p").hide();
+							$(".gif-andamento").css("display","none");
+							$("button").show();
+						});
+					};
+				});
+					
+			});	
+		</script>
+	</head>
+	<body>
+		
+		<h1>Folhas de Estilo em cascata</h1>
+		<div id="tudo">
+			<p>CSS é a sigla em ...</p>
+			<p>A grande vantagem ...</p>
+			<p>HTML marca e estrutura ...</p>
+			<p>A adoção desta ...</p>
+			<p class="esconde">Projetar um ...</p>
+		</div>
+
+	</body>
+</html>

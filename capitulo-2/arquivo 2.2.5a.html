@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Emporio do homem, emporio, homem, masculino, sao mateus, loja, roupas, camisas">
+		<meta name="description" content="jQuery - A biblioteca do programador javascript">
+		<meta name="author" content="Alan Andrade">
+		<meta name="reply-to" content="alan.andradebispo@gmail.com">
+		<meta name="robots" content="index,follow">
+
+		<title>Capitulo 2</title>
+
+		<style type="text/css">
+			
+		</style>
+
+		<script type="text/javascript" src="../js/jquery.js"></script> <!-- Esta linha chama a biblioteca jQuery-->
+
+		<script type="text/javascript">
+			$(document).ready(function(){				
+				$("button").click(function(){
+					var totalOcultos = $(":hidden",("body")).length;
+					/*Cria a variavel totalOcultos e adiciona a ela a contagem total(length) de elementos oculto dentro somente de body*/
+					var inputOcultos = $("input:hidden").length;
+					/*Cria a variavel inputOcultos e adiciona a elas contagem total(length) de elementos input ocultos */
+					$("span").text("Foram encontrados " + totalOcultos + " elementos ocultos, sendo " + inputOcultos + " elementos input do tipo hidden "); 
+					/*Exiber dentro de span o texto com o conteudo armazenado na variavel*/
+				});
+			});			
+		</script>
+	</head>
+	<body>
+		<button type="button">Ocultos</button>
+		<h1>Cabeçalho oculto por declaração CSS</h1>
+		<form>
+			<input type="hidden">
+			<input type="hidden">
+		</form>
+		<span></span> <!--aqui jQuery escreve os resultados de elementos ocultos encontrados-->
+	</body>
+</html>
